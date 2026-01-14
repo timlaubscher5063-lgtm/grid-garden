@@ -1,0 +1,111 @@
+#level-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#level-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#level-2 .peas {
+  grid-column: 1/3;
+}
+
+#level-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#level-3 .onions {
+  grid-column: 2/4;
+}
+#level-3 .tomatoes {
+  grid-column: 1/3;
+}
+#level-3 .carrots {
+  grid-column: 1/4;
+}
+
+#level-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#level-4 .peas {
+  grid-column: 1/3;
+}
+#level-4 .onions {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+#level-4 .carrots {
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+#level-4 .tomatoes {
+  grid-column: 1/2;
+}
+
+#level-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "carrots . onions . lettuce"
+    "carrots . onions peas peas"
+    "carrots tomatoes tomatoes tomatoes .";
+}
+#level-5 .carrots {
+  /* grid-column: 1/2; */
+  /* grid-row: 1/4; */
+  grid-area: carrots;
+}
+#level-5 .onions {
+  /* grid-column: 3/4; */
+  /* grid-row: 1/3; */
+  grid-area: onions;
+}
+#level-5 .lettuce {
+  /* grid-column: 5/6; */
+  /* grid-row: 1/2; */
+  grid-area: lettuce;
+}
+#level-5 .peas {
+  /* grid-column: 4/6; */
+  /* grid-row: 2/3; */
+  grid-area: peas;
+}
+#level-5 .tomatoes {
+  /* grid-column: 2/5; */
+  /* grid-row: 3/4; */
+  grid-area: tomatoes;
+}
+
+#level-6 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "carrots carrots carrots carrots carrots"
+    "onions peas peas peas tomatoes"
+    "onions peas peas peas tomatoes"
+    "lettuce lettuce lettuce lettuce lettuce";
+}
+#level-6 .carrots {
+  grid-area: carrots;
+}
+#level-6 .onions {
+  grid-area: onions;
+}
+#level-6 .lettuce {
+  grid-area: lettuce;
+}
+#level-6 .peas {
+  grid-area: peas;
+}
+#level-6 .tomatoes {
+  grid-area: tomatoes;
+}
+
+#level-7 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(5ch, 1ft));
+}
